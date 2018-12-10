@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GeneralInfo">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|fill_vertical|center_horizontal"
+        android:text="@string/general_infos" />
+
+    <ScrollView
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/brand" />
+
+            <Spinner
+                android:id="@+id/brandspinner"
+                android:layout_width="match_parent"
+                android:layout_height="27dp" />
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/type" />
+
+            <Spinner
+                android:id="@+id/typespinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/vintage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vintage" />
+
+            <EditText
+                android:id="@+id/vintagetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/licenceplatenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/licence_plate_number" />
+
+            <EditText
+                android:id="@+id/licenceplatenumbertext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/vin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vin" />
+
+            <EditText
+                android:id="@+id/vintext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/comefrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comefrom" />
+
+            <Spinner
+                android:id="@+id/comefromspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/kilometers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kilometers" />
+
+            <EditText
+                android:id="@+id/kilometerstext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/bodytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bodytype" />
+
+            <Spinner
+                android:id="@+id/bodytypespinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/numberofkeys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/numberofkeys" />
+
+            <EditText
+                android:id="@+id/numberofkeystext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/receptiondate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receptiondate" />
+
+            <EditText
+                android:id="@+id/receptiondatetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_survey" />
+    </LinearLayout>
+</LinearLayout>
