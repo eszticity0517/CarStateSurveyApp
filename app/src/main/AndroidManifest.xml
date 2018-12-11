@@ -9,11 +9,11 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
@@ -25,8 +25,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome" android:screenOrientation="portrait"/>
-        <activity android:name=".GeneralInfo" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GeneralInfo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".BodyAesthetic"></activity>
     </application>
 
 </manifest>
