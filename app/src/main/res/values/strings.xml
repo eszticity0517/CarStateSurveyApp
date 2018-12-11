@@ -27,4 +27,17 @@
     <string name="numberofkeys">Number of keys</string>
     <string name="receptiondate">Reception date</string>
     <string name="next">Next</string>
+    <string name="polish">Polish</string>
+    <string name="isthecarrusty">Is the car rusty?</string>
+    <string name="windscreen">Windscreen</string>
+    <string name="lamps">Lamps</string>
+    <string name="headlightwashers">Headlight washers</string>
+    <string name="windwcreenwiper">Windscreen wiper</string>
+    <string name="antenna">Antenna</string>
+    <string name="tirebrand">Tire brand</string>
+    <string name="sparetirebrand">Spare tire brand</string>
+    <string name="boltsandwheelguard">Bolts and wheel guard</string>
+    <string name="sparewheel">Spare wheel</string>
+    <string name="carjack">Car jack</string>
+    <string name="tirecondition">Tire condition</string>
 </resources>
