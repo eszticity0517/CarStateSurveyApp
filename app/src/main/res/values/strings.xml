@@ -40,4 +40,15 @@
     <string name="sparewheel">Spare wheel</string>
     <string name="carjack">Car jack</string>
     <string name="tirecondition">Tire condition</string>
+    <string name="bonnet">Bonnet</string>
+    <string name="rightfrontarc">Right front arc</string>
+    <string name="rightfrontdoor">Right front door</string>
+    <string name="rightreardoor">Right rear door</string>
+    <string name="rightreararc">Right rear arc</string>
+    <string name="tailgate">Tailgate</string>
+    <string name="leftreararc">Left rear arc</string>
+    <string name="leftreardoor">Left rear door</string>
+    <string name="leftfrontdoor">Left front door</string>
+    <string name="leftfrontarc">Left front arc</string>
+    <string name="top">Top</string>
 </resources>

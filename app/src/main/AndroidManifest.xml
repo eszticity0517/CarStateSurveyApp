@@ -30,12 +30,13 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".GeneralInfo"
-            android:windowSoftInputMode="adjustNothing"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".BodyAesthetic"
-            android:windowSoftInputMode="adjustNothing"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".PaintThickness"></activity>
     </application>
 
 </manifest>
