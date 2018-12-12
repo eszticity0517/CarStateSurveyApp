@@ -5,9 +5,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -17,6 +21,18 @@ public class GeneralInfo extends AppCompatActivity {
     private EditText receptiondate;
     private Calendar myCalendar;
     private  DatePickerDialog.OnDateSetListener date;
+
+    private Spinner brandspinner;
+    private Spinner comefromspinner;
+    private Spinner bodytypesspinner;
+
+    private ArrayAdapter<String>  brandadapter;
+    private ArrayAdapter<String>  comefromadapter;
+    private ArrayAdapter<String>  bodytypesadapter;
+
+    private String[] brands;
+    private String[] comefroms;
+    private String[] bodytypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +74,38 @@ public class GeneralInfo extends AppCompatActivity {
                 startActivity(k);
             }
         });
+
+        // This info will come from an API function.
+        brands = new String[] {
+                "Alfa Romeo", "Bentley", "BMW", "Fiat", "Mazda", "Opel", "Wolkswagen"
+        };
+
+        comefroms = new String[] {
+                "Auto1", "Commission", "Set-off", "From the street", "COTW"
+        };
+
+        bodytypes = new String[] {
+                "Hatchback", "Small city", "MPV", "Beach-wagon", "SUV", "Sedan", "Cabrio", "4x4", "TKG"
+        };
+
+        brandspinner = (Spinner) findViewById(R.id.brandspinner);
+
+        brandadapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, brands);
+        brandadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        brandspinner.setAdapter(brandadapter);
+
+        comefromspinner = (Spinner) findViewById(R.id.comefromspinner);
+        comefromadapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, comefroms);
+        comefromadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        comefromspinner.setAdapter(comefromadapter);
+
+        bodytypesspinner = (Spinner) findViewById(R.id.bodytypespinner);
+        bodytypesadapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, bodytypes);
+        bodytypesadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        bodytypesspinner.setAdapter(bodytypesadapter);
     }
 
     private void updateLabel() {

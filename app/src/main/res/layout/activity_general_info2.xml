@@ -88,7 +88,8 @@
 
                     </RelativeLayout>
 
-                    <TextView
+                  <!--  This is commented out, because I intend to get the data from the API and it is not ready yet-->
+                   <!-- <TextView
                         android:id="@+id/type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -117,7 +118,7 @@
                             android:layout_height="15dp"
                             android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
 
-                    </RelativeLayout>
+                    </RelativeLayout>-->
 
                     <TextView
                         android:id="@+id/vintage"
