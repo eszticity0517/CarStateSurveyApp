@@ -85,7 +85,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
 
                     </RelativeLayout>
 
@@ -116,7 +116,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
                     <TextView
                         android:id="@+id/windscreen"
@@ -145,7 +145,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
 
                     </RelativeLayout>
                     <TextView
@@ -175,7 +175,7 @@
                         android:layout_gravity="center"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
-                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
 
                     <TextView
@@ -205,7 +205,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
 
                     <TextView
@@ -235,7 +235,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
 
                     <TextView
@@ -264,7 +264,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
                     <TextView
                         android:id="@+id/tirebrand"
@@ -339,7 +339,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
 
                     <TextView
@@ -368,7 +368,7 @@
                             android:layout_gravity="center"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
                     </RelativeLayout>
                     <TextView
                         android:id="@+id/tirecondition"

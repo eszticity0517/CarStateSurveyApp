@@ -51,4 +51,25 @@
     <string name="leftfrontdoor">Left front door</string>
     <string name="leftfrontarc">Left front arc</string>
     <string name="top">Top</string>
+    <string name="title_activity_engine_room">EngineRoom</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="engine_room_cleanness">Engine room cleanness</string>
+    <string name="oil_consistency">Oil consistency</string>
+    <string name="cooling_water">Cooling water</string>
+    <string name="water_leaking">Water leaking</string>
+    <string name="antifreeze_degree">Antifreeze degree</string>
+    <string name="engineroom_cover">Engineroom cover</string>
+    <string name="need_leather_paint">Is leather paint needed?</string>
+    <string name="trims_and_leather">Trims and leather</string>
+    <string name="carpets">Carpets</string>
+    <string name="changeover_button">Changeover button</string>
+    <string name="control_status">Control status</string>
+    <string name="interior_rear_view">Interior rear view</string>
+    <string name="headrests">Headrests</string>
+    <string name="trunkmat">Trunk mat</string>
+    <string name="hatrack">Hat-rack</string>
+    <string name="handrails">Hand rails</string>
+    <string name="steeringstate">Steering state</string>
 </resources>

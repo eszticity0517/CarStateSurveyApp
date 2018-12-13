@@ -1,15 +1,19 @@
 package com.carstatesurveyapp;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.hardware.Camera;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -100,6 +104,14 @@ public class PaintThickness extends AppCompatActivity {
         leftreardoorseekbar.setOnSeekBarChangeListener(new ChangeListener((leftreardoorseekbarvalue)));
         leftfrontdoorseekbar.setOnSeekBarChangeListener(new ChangeListener((leftfrontdoorseekbarvalue)));
         topseekbar.setOnSeekBarChangeListener(new ChangeListener((topseekbarvalue)));
+
+        Button nextbutton = findViewById(R.id.button4);
+        nextbutton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent k = new Intent(PaintThickness.this, EngineRoom.class);
+                startActivity(k);
+            }
+        });
     }
 
     private class ChangeListener implements SeekBar.OnSeekBarChangeListener {

@@ -33,6 +33,7 @@ public class GeneralInfo extends AppCompatActivity {
     private String[] brands;
     private String[] comefroms;
     private String[] bodytypes;
+    private Button nextbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public class GeneralInfo extends AppCompatActivity {
             }
         });
 
-        Button nextbutton = findViewById(R.id.button4);
+        nextbutton = findViewById(R.id.button4);
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent k = new Intent(GeneralInfo.this, BodyAesthetic.class);
