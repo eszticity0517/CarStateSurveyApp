@@ -58,10 +58,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/polish"
+                        android:id="@+id/needleatherpaint"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/engine_room_cleanness" />
+                        android:text="@string/need_leather_paint" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -71,11 +71,287 @@
                         android:orientation="horizontal">
 
                         <Spinner
-                            android:id="@+id/engineroomcleannessspinner"
+                            android:id="@+id/needleatherpaintspinner"
                             android:background="#EEEEEE"
                             android:layout_width="match_parent"
                             android:layout_height="27dp" />
 
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/cabinsmell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cabin_smell" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/cabinsmellspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/trimsandleather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trims_and_leather" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/trimsandleatherspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/carpets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carpets" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/carpetsspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/changeoverbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/changeover_button" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/changeoverbuttonspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/controlstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/control_status" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/controlstatusspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/interiorrearview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/interior_rear_view" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/interiorrearviewspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/headrests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/headrests" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/headrestsspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/handrails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/handrails" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/handrailsspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/steeringstate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/steeringstate" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/steeringstatespinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
 
                         <ImageView
                             android:layout_alignParentRight="true"
