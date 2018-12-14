@@ -1,13 +1,19 @@
 package com.carstatesurveyapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class BodyAesthetic extends AppCompatActivity {
 
@@ -45,8 +51,54 @@ public class BodyAesthetic extends AppCompatActivity {
         setContentView(R.layout.activity_body_aesthetic);
 
         Button nextbutton = findViewById(R.id.button4);
+
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
+                // First get selected values from spinner
+                String polish = polishspinner.getSelectedItem().toString();
+                String isthecarrusty = rustyspinner.getSelectedItem().toString();
+                String windscreen = windscreenspinner.getSelectedItem().toString();
+                String lamps = lampsspinner.getSelectedItem().toString();
+                String headlightwashers = headlightwasherspinner.getSelectedItem().toString();
+                String windscreenwiper = windscreenwiperspinner.getSelectedItem().toString();
+                String antenna = antennaspinner.getSelectedItem().toString();
+                String carjack = carjackspinner.getSelectedItem().toString();
+
+                // After we get data from TextViews
+                TextView tirebrandtext = (TextView) findViewById(R.id.tirebrandtext);
+                String tirebrand = tirebrandtext.getText().toString();
+
+                TextView sparetirebrandtext = (TextView) findViewById(R.id.sparetirebrandtext);
+                String sparetirebrand = sparetirebrandtext.getText().toString();
+
+                TextView tireconditiontext = (TextView) findViewById(R.id.tireconditiontext);
+                String tirecondition = tireconditiontext.getText().toString();
+
+                // Save data
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                RadioGroup boltsandwheelguardradiobutton = (RadioGroup) findViewById(R.id.radiogroup);
+                int radioButtonID = boltsandwheelguardradiobutton.getCheckedRadioButtonId();
+                RadioButton  radioButton = boltsandwheelguardradiobutton.findViewById(radioButtonID);
+                String text = radioButton.getText().toString();
+
+                editor.putString("polish", polish);
+                editor.putString("isthecarrusty", isthecarrusty);
+                editor.putString("windscreen", windscreen);
+                editor.putString("lamps", lamps);
+                editor.putString("headlightwashers", headlightwashers);
+                editor.putString("windscreenwiper", windscreenwiper);
+                editor.putString("antenna", antenna);
+                editor.putString("tirebrand", tirebrand);
+                editor.putString("sparetirebrand", sparetirebrand);
+                editor.putString("carjack", carjack);
+                editor.putString("tirecondition", tirecondition);
+                editor.putString("boltsandwheelguard", text);
+
+                editor.apply();
+
                 Intent k = new Intent(BodyAesthetic.this, PaintThickness.class);
                 startActivity(k);
             }
@@ -140,22 +192,5 @@ public class BodyAesthetic extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, carjacks);
         carjackadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         carjackspinner.setAdapter(carjackadapter);
-    }
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radio_pirates:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.radio_ninjas:
-                if (checked)
-                    // Ninjas rule
-                    break;
-        }
     }
 }

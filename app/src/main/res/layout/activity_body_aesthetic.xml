@@ -297,20 +297,47 @@
                         android:layout_height="wrap_content"
                         android:text="@string/boltsandwheelguard" />
 
-                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                        android:layout_width="match_parent"
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <RadioButton android:id="@+id/radio_pirates"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <RadioButton
+                            android:id="@+id/boltsarethere"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/headlightwashers"
-                            android:onClick="onRadioButtonClicked"/>
-                        <RadioButton android:id="@+id/radio_ninjas"
+                            android:layout_weight="1"
+                            android:text="Bolts are there" />
+
+                        <RadioButton
+                            android:id="@+id/boltsaremissing"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/headlightwashers"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:layout_weight="1"
+                            android:text="Bolts are missing" />
+
+                        <RadioButton
+                            android:id="@+id/wheelguardisthere"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Wheel guard is there" />
+
+                        <RadioButton
+                            android:id="@+id/wheelguardismissing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Wheel guards is missing" />
+
+                        <RadioButton
+                            android:id="@+id/everythingisthere"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Everything is there" />
                     </RadioGroup>
 
                     <TextView

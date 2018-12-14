@@ -3,6 +3,7 @@ package com.carstatesurveyapp;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -182,6 +183,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
+
+            // Save data
+            SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putString("myInt", email);
+
+// Apply the edits!
+            editor.apply();
         }
     }
 

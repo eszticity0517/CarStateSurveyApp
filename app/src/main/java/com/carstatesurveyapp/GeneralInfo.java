@@ -2,6 +2,7 @@ package com.carstatesurveyapp;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -71,6 +73,47 @@ public class GeneralInfo extends AppCompatActivity {
         nextbutton = findViewById(R.id.button4);
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
+                // First get selected values from spinner
+                String brand = brandspinner.getSelectedItem().toString();
+                String camefrom = comefromspinner.getSelectedItem().toString();
+                String bodytype = bodytypesspinner.getSelectedItem().toString();
+
+                // After we get data from TextViews
+                TextView vintagetext = (TextView) findViewById(R.id.vintagetext);
+                String vintage = vintagetext.getText().toString();
+
+                TextView licenceplatenumbertext = (TextView) findViewById(R.id.licenceplatenumbertext);
+                String licenceplatenumber = licenceplatenumbertext.getText().toString();
+
+                TextView vintext = (TextView) findViewById(R.id.vintext);
+                String vin = vintext.getText().toString();
+
+                TextView kilometerstext = (TextView) findViewById(R.id.kilometerstext);
+                String kilometers = kilometerstext.getText().toString();
+
+                TextView numberofkeystext = (TextView) findViewById(R.id.numberofkeystext);
+                String numberofkeys = numberofkeystext.getText().toString();
+
+                TextView receptiondatetext = (TextView) findViewById(R.id.receptiondatetext);
+                String receptiondate = receptiondatetext.getText().toString();
+
+                // Save data
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                editor.putString("brand", brand);
+                editor.putString("vintage", vintage);
+                editor.putString("licenceplatenumber", licenceplatenumber);
+                editor.putString("VIN", vin);
+                editor.putString("camefrom", camefrom);
+                editor.putString("kilometers", kilometers);
+                editor.putString("bodytype", bodytype);
+                editor.putString("numberofkeys", numberofkeys);
+                editor.putString("receptiondate", receptiondate);
+
+                // Apply the edits!
+                editor.apply();
                 Intent k = new Intent(GeneralInfo.this, BodyAesthetic.class);
                 startActivity(k);
             }
