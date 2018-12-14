@@ -1,6 +1,7 @@
 package com.carstatesurveyapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -108,6 +109,32 @@ public class PaintThickness extends AppCompatActivity {
         Button nextbutton = findViewById(R.id.button4);
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                // Save data
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                int bonnet = bonnetseekbar.getProgress();
+                int rightfrontarc = rightfrontarcseekbar.getProgress();
+                int rightfrontdoor = rightfrontdoorseekbar.getProgress();
+                int rightreardoor = rightreardoorseekbar.getProgress();
+                int rightreararc = rightreararcseekbar.getProgress();
+                int tailgate = tailgateseekbar.getProgress();
+                int leftreararc = leftreararcseekbar.getProgress();
+                int leftreardoor = leftreardoorseekbar.getProgress();
+                int leftfrontdoor = leftfrontdoorseekbar.getProgress();
+                int top = topseekbar.getProgress();
+
+                editor.putInt("bonnet", bonnet);
+                editor.putInt("rightfrontarc", rightfrontarc);
+                editor.putInt("rightfrontdoor", rightfrontdoor);
+                editor.putInt("rightreardoor", rightreardoor);
+                editor.putInt("rightreararc", rightreararc);
+                editor.putInt("tailgate", tailgate);
+                editor.putInt("leftreararc", leftreararc);
+                editor.putInt("leftreardoor", leftreardoor);
+                editor.putInt("leftfrontdoor", leftfrontdoor);
+                editor.putInt("top", top);
+
                 Intent k = new Intent(PaintThickness.this, EngineRoom.class);
                 startActivity(k);
             }
