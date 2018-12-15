@@ -1,9 +1,15 @@
 package com.carstatesurveyapp;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CabinAesthetic extends AppCompatActivity {
 
@@ -28,8 +34,6 @@ public class CabinAesthetic extends AppCompatActivity {
     private Spinner controlstatusespinner;
     private Spinner interiorrearviewspinner;
     private Spinner headrestspinner;
-    private Spinner trunkmatspinner;
-    private Spinner hatrackspinner;
     private Spinner handrailspinner;
     private Spinner steeringstatespinner;
 
@@ -40,8 +44,6 @@ public class CabinAesthetic extends AppCompatActivity {
     private String[] controlstatuses;
     private String[] interiorrearviews;
     private String[] headrests;
-    private String[] trunkmats;
-    private String[] hatracks;
     private String[] handrails;
     private String[] steeringstates;
 
@@ -49,6 +51,41 @@ public class CabinAesthetic extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cabin_aesthetic);
+
+        Button nextButton = (Button) findViewById(R.id.button4);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String cabinsmell = cabinsmellspinner.getSelectedItem().toString();
+                String carpet = carpetspinner.getSelectedItem().toString();
+                String changeoverbutton = changeoverbuttonspinner.getSelectedItem().toString();
+                String controlstatus = controlstatusespinner.getSelectedItem().toString();
+                String handrail = handrailspinner.getSelectedItem().toString();
+                String headrest = headrestspinner.getSelectedItem().toString();
+                String interiorrearview = interiorrearviewspinner.getSelectedItem().toString();
+                String needleatherpaint = needleatherpaintspinner.getSelectedItem().toString();
+                String steeringstate = steeringstatespinner.getSelectedItem().toString();
+                String trimsandleather = trimsandleatherspinner.getSelectedItem().toString();
+
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                editor.putString("cabinsmell", cabinsmell);
+                editor.putString("carpet", carpet);
+                editor.putString("changeoverbutton", changeoverbutton);
+                editor.putString("controlstatus", controlstatus);
+                editor.putString("handrail", handrail);
+                editor.putString("headrest", headrest);
+                editor.putString("interiorrearview", interiorrearview);
+                editor.putString("needleatherpaint", needleatherpaint);
+                editor.putString("steeringstate", steeringstate);
+                editor.putString("trimsandleather", trimsandleather);
+
+                editor.apply();
+
+                Intent k = new Intent(CabinAesthetic.this, EngineRoom.class);
+                startActivity(k);
+            }
+        });
 
         // This info will come from an API function.
         needleatherpaints = new String[] {
@@ -77,14 +114,6 @@ public class CabinAesthetic extends AppCompatActivity {
 
         headrests = new String[] {
                 "There are", "Missing"
-        };
-
-        trunkmats = new String[] {
-                "There is", "Missing", "Not included"
-        };
-
-        hatracks = new String[] {
-                "There is", "Missing", "Not included"
         };
 
         handrails = new String[] {

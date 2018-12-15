@@ -3,7 +3,9 @@ package com.carstatesurveyapp;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Environment;
@@ -11,14 +13,17 @@ import android.provider.MediaStore;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 
 public class EngineRoom extends AppCompatActivity {
@@ -59,6 +64,34 @@ public class EngineRoom extends AppCompatActivity {
         Button nextbutton = findViewById(R.id.button4);
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                //First, get elements from spinner
+
+                String antifreezeedegree = ((TextView) findViewById(R.id.antifreezedegreetext)).getText().toString();
+
+                String engineroomcleanness = engineroomcleannessspinner.getSelectedItem().toString();
+                String oilconsinstency = oilconsinstencyspinner.getSelectedItem().toString();
+                String coolingwater = coolingwaterspinner.getSelectedItem().toString();
+                String waterleaking = waterleakingspinner.getSelectedItem().toString();
+                String engineroomcover = engineroomcoverspinner.getSelectedItem().toString();
+
+                ImageView imageView=(ImageView) findViewById(R.id.ImageView);
+                Bitmap image=((BitmapDrawable)imageView.getDrawable()).getBitmap();
+                // String imagestring = BitMapToString(image);
+
+                // Save data
+                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                SharedPreferences.Editor editor = settings.edit();
+
+                editor.putString("engineroomcleanness", engineroomcleanness);
+                editor.putString("oilconsinstency", oilconsinstency);
+                editor.putString("coolingwater", coolingwater);
+                editor.putString("waterleaking", waterleaking);
+                editor.putString("antifreezeedegree", antifreezeedegree);
+                editor.putString("engineroomcover", engineroomcover);
+                editor.putString("pictureoftheengineroom", imageUri.toString());
+
+                editor.apply();
+
                 Intent k = new Intent(EngineRoom.this, CabinAesthetic.class);
                 startActivity(k);
             }
@@ -157,5 +190,13 @@ public class EngineRoom extends AppCompatActivity {
                     }
                 }
         }
+    }
+
+    public String BitMapToString(Bitmap bitmap){
+        ByteArrayOutputStream baos=new  ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG,100, baos);
+        byte [] b=baos.toByteArray();
+        String temp=Base64.encodeToString(b, Base64.DEFAULT);
+        return temp;
     }
 }
