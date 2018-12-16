@@ -74,4 +74,15 @@
     <string name="handrails">Hand rails</string>
     <string name="steeringstate">Steering state</string>
     <string name="picture_of_the_engineroom">Picture of the engineroom</string>
+    <string name="remote_controls_locks">Remote controls / locks</string>
+    <string name="audio_system">Audio system</string>
+    <string name="what_is_the_code">What is the code?</string>
+    <string name="clock_group">Clock group</string>
+    <string name="horn">Horn</string>
+    <string name="electric_windows">Electric windows</string>
+    <string name="electic_mirror_adjustment">Electric mirror adjustment</string>
+    <string name="swing_switches_multiswitches">Swing switches / multiswitches</string>
+    <string name="navigation_system">Navigation system</string>
+    <string name="sunroof">Sunroof</string>
+    <string name="seat_adjustment">Seat adjustment</string>
 </resources>

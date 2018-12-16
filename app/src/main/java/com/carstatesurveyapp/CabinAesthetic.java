@@ -82,7 +82,7 @@ public class CabinAesthetic extends AppCompatActivity {
 
                 editor.apply();
 
-                Intent k = new Intent(CabinAesthetic.this, EngineRoom.class);
+                Intent k = new Intent(CabinAesthetic.this, CabinTechnical.class);
                 startActivity(k);
             }
         });
