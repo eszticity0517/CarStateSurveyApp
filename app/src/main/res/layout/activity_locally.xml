@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Locally">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imageView3"
+        android:layout_width="960dp"
+        android:layout_height="540dp"
+        card_view:srcCompat="@drawable/download" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dtcsonignition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dtcs_on_ignition" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <RadioButton
+                            android:id="@+id/nothing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nothing" />
+
+
+                        <RadioButton
+                            android:id="@+id/checkengine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Checkengine" />
+
+                        <RadioButton
+                            android:id="@+id/brakeproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Brake problem" />
+
+                        <RadioButton
+                            android:id="@+id/absproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ABS problem" />
+
+                        <RadioButton
+                            android:id="@+id/ignitionproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ignition problem" />
+
+                        <RadioButton
+                            android:id="@+id/airbagsproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Airbags problem" />
+
+                        <RadioButton
+                            android:id="@+id/espproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ESP problem" />
+
+                        <RadioButton
+                            android:id="@+id/burntbulbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Burnt bulbs" />
+
+                        <RadioButton
+                            android:id="@+id/tirepressureislow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tire pressure is low" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/doesitstart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/does_it_start" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/doesitstartspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/istheaccumulatorok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_the_accumulator_ok" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/istheaccumulatorokspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/istheengineflawless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_the_engine_flawless" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/istheengineflawlessspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/whatistheproblem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/what_is_the_problem" />
+
+                    <EditText
+                        android:id="@+id/whatistheproblemtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/fuel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fuel" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fuelspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/fuellevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fuel_level" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fuellevelspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/changertype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/changer_type" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/changertypespinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/doestheairblowwork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/does_the_air_blow_work" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/doestheairblowworkspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/doesthecompressorturnon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/does_the_compressor_turn_on" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/doesthecompressorturnonspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/heating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heating" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/heatingspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>

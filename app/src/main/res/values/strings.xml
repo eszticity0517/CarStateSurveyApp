@@ -85,4 +85,15 @@
     <string name="navigation_system">Navigation system</string>
     <string name="sunroof">Sunroof</string>
     <string name="seat_adjustment">Seat adjustment</string>
+    <string name="dtcs_on_ignition">DTCs on ignition</string>
+    <string name="does_it_start">Does it start?</string>
+    <string name="is_the_accumulator_ok">Is the accumulator ok?</string>
+    <string name="is_the_engine_flawless">Is the engine flawless?</string>
+    <string name="what_is_the_problem">What is the problem?</string>
+    <string name="fuel">Fuel</string>
+    <string name="fuel_level">Fuel level</string>
+    <string name="changer_type">Changer type</string>
+    <string name="does_the_air_blow_work">Does the air blow work?</string>
+    <string name="does_the_compressor_turn_on">Does the compressor turn on?</string>
+    <string name="heating">Heating</string>
 </resources>

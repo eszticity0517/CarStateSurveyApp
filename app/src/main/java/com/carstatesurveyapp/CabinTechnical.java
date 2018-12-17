@@ -185,7 +185,7 @@ public class CabinTechnical extends AppCompatActivity {
 
                 editor.apply();
 
-                Intent k = new Intent(CabinTechnical.this, CabinTechnical.class);
+                Intent k = new Intent(CabinTechnical.this, Locally.class);
                 startActivity(k);
             }
         });
