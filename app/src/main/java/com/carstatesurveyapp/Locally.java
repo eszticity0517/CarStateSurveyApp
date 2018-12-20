@@ -1,5 +1,6 @@
 package com.carstatesurveyapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
@@ -186,6 +187,9 @@ public class Locally extends AppCompatActivity {
                 editor.putString("heating", heating);
 
                 editor.apply();
+
+                Intent k = new Intent(Locally.this, Driving.class);
+                startActivity(k);
             }
         });
     }

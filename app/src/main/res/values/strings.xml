@@ -95,5 +95,19 @@
     <string name="changer_type">Changer type</string>
     <string name="does_the_air_blow_work">Does the air blow work?</string>
     <string name="does_the_compressor_turn_on">Does the compressor turn on?</string>
+    <string name="errors_in_extensions_during_drive">Errors in extensions during drive</string>
+    <string name="engine_sound">Engine sound</string>
+    <string name="does_it_smoke_when_accelerating">Does it smoke when accelerating?</string>
+    <string name="shift_gate">Shift gate</string>
+    <string name="clutch">Clutch</string>
+    <string name="flywheel">Flywheel</string>
+    <string name="automation_changer_operation">Automation changer operation</string>
+    <string name="power_steering">Power steering</string>
+    <string name="hand_brake">Hand brake</string>
+    <string name="suspension_condition">Suspension condition</string>
+    <string name="landing_gear_failure_reason">Landing gear failure reason</string>
+    <string name="brake_condition">Brake condition</string>
+    <string name="brake_error_source">Brake error source</string>
+    <string name="parking_radio_camera">Parking radio camera</string>
     <string name="heating">Heating</string>
 </resources>
