@@ -110,4 +110,11 @@
     <string name="brake_error_source">Brake error source</string>
     <string name="parking_radio_camera">Parking radio camera</string>
     <string name="heating">Heating</string>
+    <string name="sidelights">Sidelights</string>
+    <string name="dippedlights">Dipped lights</string>
+    <string name="headlight">Headlight</string>
+    <string name="brakelight">Brake light</string>
+    <string name="reversing">Reversing</string>
+    <string name="turnsignal">Turn signal</string>
+    <string name="foglights">Fog lights</string>
 </resources>

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Driving">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/imageView3"
+        android:layout_width="960dp"
+        android:layout_height="540dp"
+        card_view:srcCompat="@drawable/download" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/errorsinextensionsduringdrive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/errors_in_extensions_during_drive" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <RadioButton
+                            android:id="@+id/nothing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nothing" />
+
+                        <RadioButton
+                            android:id="@+id/templomatproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Templomat problem" />
+
+                        <RadioButton
+                            android:id="@+id/absproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ABS problem" />
+
+                        <RadioButton
+                            android:id="@+id/pullingaway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pulling away" />
+
+                        <RadioButton
+                            android:id="@+id/espproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ESP problem" />
+
+                        <RadioButton
+                            android:id="@+id/trcproblem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TRC problem" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/enginesound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/engine_sound" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/enginesoundspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/doesitsmokewhenaccelerating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/does_it_smoke_when_accelerating" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/doesitsmokewhenacceleratingspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/shiftgate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shift_gate" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/shiftgatespinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/clutch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clutch" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/clutchspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/flywheel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flywheel" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/flywheelspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/automationchangeroperation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/automation_changer_operation" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/automationchangeroperationspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/powersteering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/power_steering" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/powerstreeringspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/handbrake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hand_brake" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/handbrakespinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/suspensioncondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/suspension_condition" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/suspensionconditionspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/landinggearfailurereason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/landing_gear_failure_reason" />
+
+
+                    <EditText
+                        android:id="@+id/landinggearfailurereasontext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/brakecondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brake_condition" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/brakeconditionspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/brakeerrorsource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brake_error_source" />
+
+                    <EditText
+                        android:id="@+id/brakeerrorsourcetext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:id="@+id/parkingradiocamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parking_radio_camera" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight=".28"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/parkingradiocameraspinner"
+                            android:background="#EEEEEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:layout_gravity="center"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            card_view:srcCompat="@drawable/ic_arrow_drop_down_black_24dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>
