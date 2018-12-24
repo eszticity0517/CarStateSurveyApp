@@ -115,7 +115,7 @@ public class Lightning extends AppCompatActivity {
 
                 editor.apply();
 
-                Intent k = new Intent(Lightning.this, Lightning.class);
+                Intent k = new Intent(Lightning.this, Summary.class);
                 startActivity(k);
             }
         });

@@ -117,4 +117,7 @@
     <string name="reversing">Reversing</string>
     <string name="turnsignal">Turn signal</string>
     <string name="foglights">Fog lights</string>
+    <string name="nextstate">Next state</string>
+    <string name="upload">Upload</string>
+    <string name="deletesurvey">Delete survey</string>
 </resources>
