@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -98,24 +99,54 @@ public class GeneralInfo extends AppCompatActivity {
                 TextView receptiondatetext = (TextView) findViewById(R.id.receptiondatetext);
                 String receptiondate = receptiondatetext.getText().toString();
 
-                // Save data
-                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
-                SharedPreferences.Editor editor = settings.edit();
+                if (
+                        TextUtils.isEmpty(vintagetext.getText().toString())
+                                ||   TextUtils.isEmpty(licenceplatenumbertext.getText().toString())
+                                ||   TextUtils.isEmpty(vintext.getText().toString())
+                                ||   TextUtils.isEmpty(kilometerstext.getText().toString())
+                                ||   TextUtils.isEmpty(numberofkeystext.getText().toString()))
+                {
+                    if(TextUtils.isEmpty(vintagetext.getText().toString()))
+                    {
+                        vintagetext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(licenceplatenumbertext.getText().toString()))
+                    {
+                        licenceplatenumbertext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(vintext.getText().toString()))
+                    {
+                        vintext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(kilometerstext.getText().toString()))
+                    {
+                        kilometerstext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(numberofkeystext.getText().toString()))
+                    {
+                        numberofkeystext.setError(getString(R.string.error_field_required));
+                    }
+                }
+                else {
+                    // Save data
+                    SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                    SharedPreferences.Editor editor = settings.edit();
 
-                editor.putString("brand", brand);
-                editor.putString("vintage", vintage);
-                editor.putString("licenceplatenumber", licenceplatenumber);
-                editor.putString("VIN", vin);
-                editor.putString("camefrom", camefrom);
-                editor.putString("kilometers", kilometers);
-                editor.putString("bodytype", bodytype);
-                editor.putString("numberofkeys", numberofkeys);
-                editor.putString("receptiondate", receptiondate);
+                    editor.putString("brand", brand);
+                    editor.putString("vintage", vintage);
+                    editor.putString("licenceplatenumber", licenceplatenumber);
+                    editor.putString("VIN", vin);
+                    editor.putString("camefrom", camefrom);
+                    editor.putString("kilometers", kilometers);
+                    editor.putString("bodytype", bodytype);
+                    editor.putString("numberofkeys", numberofkeys);
+                    editor.putString("receptiondate", receptiondate);
 
-                // Apply the edits!
-                editor.apply();
-                Intent k = new Intent(GeneralInfo.this, BodyAesthetic.class);
-                startActivity(k);
+                    // Apply the edits!
+                    editor.apply();
+                    Intent k = new Intent(GeneralInfo.this, BodyAesthetic.class);
+                    startActivity(k);
+                }
             }
         });
 

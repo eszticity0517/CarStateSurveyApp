@@ -113,6 +113,7 @@ public class Driving extends AppCompatActivity {
         parkingradiocameraspinner = (Spinner) findViewById(R.id.parkingradiocameraspinner);
 
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+        radioGroup.check(R.id.nothing);
 
         enginesoundadapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, enginesoundoptions);

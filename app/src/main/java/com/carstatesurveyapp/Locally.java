@@ -146,6 +146,7 @@ public class Locally extends AppCompatActivity {
         heatingspinner.setAdapter(heatingadapter);
 
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+        radioGroup.check(R.id.nothing);
         whatistheproblem = (EditText) findViewById(R.id.whatistheproblemtext);
 
         Button nextbutton = (Button) findViewById(R.id.button4);

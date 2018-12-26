@@ -13,11 +13,13 @@ import android.provider.MediaStore;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -67,6 +69,7 @@ public class EngineRoom extends AppCompatActivity {
                 //First, get elements from spinner
 
                 String antifreezeedegree = ((TextView) findViewById(R.id.antifreezedegreetext)).getText().toString();
+                EditText antifreezeedegreetext = ((EditText) findViewById(R.id.antifreezedegreetext));
 
                 String engineroomcleanness = engineroomcleannessspinner.getSelectedItem().toString();
                 String oilconsinstency = oilconsinstencyspinner.getSelectedItem().toString();
@@ -78,22 +81,28 @@ public class EngineRoom extends AppCompatActivity {
                 Bitmap image=((BitmapDrawable)imageView.getDrawable()).getBitmap();
                 // String imagestring = BitMapToString(image);
 
-                // Save data
-                SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
-                SharedPreferences.Editor editor = settings.edit();
+                if (TextUtils.isEmpty(antifreezeedegree))
+                {
+                    antifreezeedegreetext.setError(getString(R.string.error_field_required));
+                }
+                else {
+                    // Save data
+                    SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
+                    SharedPreferences.Editor editor = settings.edit();
 
-                editor.putString("engineroomcleanness", engineroomcleanness);
-                editor.putString("oilconsinstency", oilconsinstency);
-                editor.putString("coolingwater", coolingwater);
-                editor.putString("waterleaking", waterleaking);
-                editor.putString("antifreezeedegree", antifreezeedegree);
-                editor.putString("engineroomcover", engineroomcover);
-                editor.putString("pictureoftheengineroom", imageUri.toString());
+                    editor.putString("engineroomcleanness", engineroomcleanness);
+                    editor.putString("oilconsinstency", oilconsinstency);
+                    editor.putString("coolingwater", coolingwater);
+                    editor.putString("waterleaking", waterleaking);
+                    editor.putString("antifreezeedegree", antifreezeedegree);
+                    editor.putString("engineroomcover", engineroomcover);
+                    editor.putString("pictureoftheengineroom", imageUri.toString());
 
-                editor.apply();
+                    editor.apply();
 
-                Intent k = new Intent(EngineRoom.this, CabinAesthetic.class);
-                startActivity(k);
+                    Intent k = new Intent(EngineRoom.this, CabinAesthetic.class);
+                    startActivity(k);
+                }
             }
         });
 
@@ -119,6 +128,7 @@ public class EngineRoom extends AppCompatActivity {
         };
 
         engineroomcleannessspinner = (Spinner) findViewById(R.id.engineroomcleannessspinner);
+
 
         engineroomcleannessadapter= new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, engineroomcleannesses);

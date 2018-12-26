@@ -121,6 +121,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/what_is_the_code" />
 
+
                     <EditText
                         android:id="@+id/whatisthecodetext"
                         android:layout_width="match_parent"

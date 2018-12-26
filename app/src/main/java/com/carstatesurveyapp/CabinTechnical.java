@@ -63,6 +63,7 @@ public class CabinTechnical extends AppCompatActivity {
         sunroofspinner = (Spinner) findViewById(R.id.sunroofspinner);
 
         radioGroup = (RadioGroup) findViewById(R.id.seatadjustmentgroup);
+        radioGroup.check(R.id.workseveriwhere);
         whatisthecode = (TextView) findViewById(R.id.whatisthecodetext);
 
         remorecontrolslocks = new String[] {

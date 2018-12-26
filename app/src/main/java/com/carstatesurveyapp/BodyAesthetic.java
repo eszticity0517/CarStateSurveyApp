@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,9 @@ public class BodyAesthetic extends AppCompatActivity {
 
         Button nextbutton = findViewById(R.id.button4);
 
+        final RadioGroup boltsandwheelguardradiobutton = (RadioGroup) findViewById(R.id.radiogroup);
+        boltsandwheelguardradiobutton.check(R.id.everythingisthere);
+
         nextbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -79,28 +83,48 @@ public class BodyAesthetic extends AppCompatActivity {
                 SharedPreferences settings = getApplicationContext().getSharedPreferences("PreferencesName", 0);
                 SharedPreferences.Editor editor = settings.edit();
 
-                RadioGroup boltsandwheelguardradiobutton = (RadioGroup) findViewById(R.id.radiogroup);
+
                 int radioButtonID = boltsandwheelguardradiobutton.getCheckedRadioButtonId();
                 RadioButton  radioButton = boltsandwheelguardradiobutton.findViewById(radioButtonID);
                 String text = radioButton.getText().toString();
 
-                editor.putString("polish", polish);
-                editor.putString("isthecarrusty", isthecarrusty);
-                editor.putString("windscreen", windscreen);
-                editor.putString("lamps", lamps);
-                editor.putString("headlightwashers", headlightwashers);
-                editor.putString("windscreenwiper", windscreenwiper);
-                editor.putString("antenna", antenna);
-                editor.putString("tirebrand", tirebrand);
-                editor.putString("sparetirebrand", sparetirebrand);
-                editor.putString("carjack", carjack);
-                editor.putString("tirecondition", tirecondition);
-                editor.putString("boltsandwheelguard", text);
+                if (
+                        TextUtils.isEmpty(tirebrandtext.getText().toString())
+                                ||   TextUtils.isEmpty(sparetirebrandtext.getText().toString())
+                                ||   TextUtils.isEmpty(tireconditiontext.getText().toString()))
+                {
+                    if(TextUtils.isEmpty(tirebrandtext.getText().toString()))
+                    {
+                        tirebrandtext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(sparetirebrandtext.getText().toString()))
+                    {
+                        sparetirebrandtext.setError(getString(R.string.error_field_required));
+                    }
+                    if(TextUtils.isEmpty(tireconditiontext.getText().toString()))
+                    {
+                        tireconditiontext.setError(getString(R.string.error_field_required));
+                    }
+                }
+                else {
+                    editor.putString("polish", polish);
+                    editor.putString("isthecarrusty", isthecarrusty);
+                    editor.putString("windscreen", windscreen);
+                    editor.putString("lamps", lamps);
+                    editor.putString("headlightwashers", headlightwashers);
+                    editor.putString("windscreenwiper", windscreenwiper);
+                    editor.putString("antenna", antenna);
+                    editor.putString("tirebrand", tirebrand);
+                    editor.putString("sparetirebrand", sparetirebrand);
+                    editor.putString("carjack", carjack);
+                    editor.putString("tirecondition", tirecondition);
+                    editor.putString("boltsandwheelguard", text);
 
-                editor.apply();
+                    editor.apply();
 
-                Intent k = new Intent(BodyAesthetic.this, PaintThickness.class);
-                startActivity(k);
+                    Intent k = new Intent(BodyAesthetic.this, PaintThickness.class);
+                    startActivity(k);
+                }
             }
         });
 
